@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CHRIST>
+    <COMPUTER_SCIENCE>
+        <STU-NAME>Reuben</STU-NAME>
+        <STU-PHONE>9823080277</STU-PHONE>
+        <STU-UNIVERSITY>Pune University</STU-UNIVERSITY>
+        <STU-EMAIL>reuben@puneuniversity.in</STU-EMAIL>
+    </COMPUTER_SCIENCE>
+    <COMPUTER_SCIENCE>
+        <STU-NAME>Rohit</STU-NAME>
+        <STU-PHONE>9764223354</STU-PHONE>
+        <STU-UNIVERSITY>Vadordra University</STU-UNIVERSITY>
+        <STU-EMAIL>rohit@christuniversity.in</STU-EMAIL>
+    </COMPUTER_SCIENCE>
+    <COMPUTER_SCIENCE>
+        <STU-NAME>Jeetank</STU-NAME>
+        <STU-PHONE>9764332284</STU-PHONE>
+        <STU-UNIVERSITY>Nagpur University</STU-UNIVERSITY>
+        <STU-EMAIL>jeetank@christuniversity.in</STU-EMAIL>
+    </COMPUTER_SCIENCE>
+</CHRIST>

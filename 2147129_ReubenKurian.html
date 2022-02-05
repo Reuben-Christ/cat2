@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .card {
+            /* Add shadows to create the "card" effect */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            height: 60vw;
+            width: 30vw;
+            margin-left: 35vw;
+            margin-top: 2vw;
+            background-color: white;
+        }
+
+        .info {
+            margin-left: 2vw;
+        }
+
+        .info input[type=text],
+        input[type=email],
+        input[type=password] {
+            width: 25vw;
+            margin-top: 1vw;
+            height: 2.5vw;
+            border-radius: 2vw;
+        }
+
+        .info label {
+            font-size: 1.3vw;
+        }
+
+        .info button {
+            color: white;
+            font-size: 1vw;
+        }
+
+        /* On mouse-over, add a deeper shadow */
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        /* Add some padding inside the card container */
+        .container {
+            padding: 2px 16px;
+        }
+
+        .btn-grad {
+            background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 51%, #00d2ff 100%)
+        }
+
+        .btn-grad {
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+            margin-left: 14vw;
+            margin-top: -4vw;
+        }
+
+        .btn-grad:hover {
+            background-position: right center;
+            /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .btn-grad1 {
+            background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 51%, #00d2ff 100%)
+        }
+
+        .btn-grad1 {
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+            margin-left: 2vw;
+            margin-top: 2vw;
+        }
+
+        .btn-grad1:hover {
+            background-position: right center;
+            /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .header {
+            height: 10vw;
+            align-content: center;
+            background-color: black;
+            color: white;
+            width: 100vw;
+            margin-left: -1vw;
+            margin-top: -2vw;
+        }
+
+        .logoimg {
+            position: absolute;
+            height: 5vw;
+            width: 15vw;
+            margin-top: 2.2vw;
+            margin-left: 1vw;
+        }
+
+        span {
+            display: block;
+            margin-left: 20px;
+            color: red;
+            font-style: italic;
+        }
+        body{
+            background-image: url('R.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;  
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img class="logoimg" src="logo.jpg"></img>
+        <center>
+            <h1><br>Christ University</h1>
+            <p>Dharmaram College Post, Hosur Road, Bengaluru - 560029,Karnataka,India</p>
+            <p>Tel: +91 804012 9100 / 9600</p>
+        </center>
+    </div>
+    <div class="card">
+        <h1>
+            <center>TECHNOVID REGISTRATION:</center>
+        </h1>
+        <div class="info">
+            <form action="">
+                <h2>Student Registration:-</h2>
+                <input type="text" name="name" id="name" placeholder="Full-Name" oninput="checknm(this)"><br>
+                <input type="text" name="phno" id="phno" placeholder="Phone Number" oninput="checkph(this)"><br>
+                <input type="text" name="branch" id="branch" placeholder="Branch"><br>
+                <input type="text" name="clg" id="clg" placeholder="College"><br>
+                <input type="text" name="add" id="add" placeholder="Address"><br>
+                <input type="text" name="state" id="state" placeholder="State"><br>
+                <input type="text" name="age" id="age" placeholder="Age" oninput="checkph(this)"><br>
+                <input type="text" id="usr" name="usr" placeholder="Username" oninput="capital(this)">
+                <input type="email" id="email" placeholder="Email-id">
+                <span></span>
+                <input type="password" id="psw1" placeholder="Password">
+                <span id="passs"></span>
+               <br>
+                 <input type="reset" id="reset" class="btn-grad1" value="RESET">
+                <button type="submit" class="btn-grad" name="submit" id="submit" onclick="empty()"> SUBMIT</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    var email = document.getElementById('email');
+    var span = document.getElementsByTagName('span');
+    email.oninput = function () {
+        const regex1 = /^\w+([\.-]?\w+)+@(christuniversity.in|christuniversity.com)$/;
+        const regex2 = /^\w+([\.-]?\w+)+@(christuniversity.in|christuniversity.com)$/;
+        if (regex1.test(email.value) || regex2.test(email.value)) {
+            span[0].innerText = "Your Email is Valid";
+            span[0].style.color = "lime";
+        }
+        else {
+            span[0].innerText = "Invalid Email Id";
+            span[0].style.color = "red";
+        }
+    }
+
+    var psw1=document.getElementById('psw1');
+    var span1= document.getElementsByTagName('span');
+    psw1.oninput = function () {
+        const regex1 = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[~`!@#$%^_+={}|:"<>,.?])[A-Za-z\d@$!%*?&]{8,}$/
+        const regex2 = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[~`!@#$%^_+={}|:"<>,.?])[A-Za-z\d@$!%*?&]{8,}$/
+        if (regex1.test(psw1.value) || regex2.test(psw1.value)) {
+            span1[0].innerText = "Your password is Valid";
+            span1[0].style.color = "lime";
+        }
+        else {
+            span1[0].innerText = "Invalid password";
+            span1[0].style.color = "red";
+        }
+    }
+
+    function checkph(element){
+  let textInput = element.value;
+  textInput = textInput.replace(/[^0-9]*$/gm, ""); 
+  element.value = textInput;
+}
+
+function checknm(element){
+  let textInput = element.value;
+  textInput = textInput.replace(/[^A-Za-z ]*$/gm, ""); 
+  element.value = textInput;
+}
+function capital(element){
+    let user=element.value;
+    const caps = user.charAt(0).toUpperCase() + user.slice(1);
+    element.value=caps;
+}
+
+    function empty(){
+        var name = document.getElementById('name')
+        var phno = document.getElementById('phno')
+        var branch=document.getElementById('branch')
+        var clg=document.getElementById('clg')
+        var add=document.getElementById('add')
+        var state=document.getElementById('state')
+        var age=document.getElementById('age')
+        var usr=document.getElementById('usr')
+        var email1 = document.getElementById('email')
+        var psw1 = document.getElementById('psw1')
+
+        var mob = /[0-9]{10}/
+            if (!mob.test(phno.value)) {
+                alert("Mobile Number can be of 10 numbers only!!")
+                return
+            }
+        if (!name.value||!phno.value||!branch.value||!clg.value||!add.value||!state.value|!age.value||!usr.value||!email1.value ||!psw1.value) {
+            alert("Fill all fields!");
+            return
+        }
+        document.cookie = "username =" + usr.value
+        document.cookie = "email =" + email1.value
+
+        localStorage.setItem("Email", email1.value);
+        localStorage.setItem("PhoneNumber", phno.value);
+        alert("Registered Successfully")
+        window.open("dom1.html");
+        
+    }
+</script>
